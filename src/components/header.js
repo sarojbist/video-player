@@ -2,21 +2,24 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { CiSearch } from "react-icons/ci";
 import { FaMicrophone } from "react-icons/fa";
 import { MdOutlineVideocam } from "react-icons/md";
-import { FaHome } from "react-icons/fa";
+
 import { IoMdNotificationsOutline } from "react-icons/io";
 import logo from "../assets/images/logo.png";
-import {useState} from "react";
-const Header = () => {
-    const [isHamOpen, setIsHamOpen] = useState(false);
+// import {useState} from "react";
+const Header = (props) => {
+    // const [isHamOpen, setIsHamOpen] = useState(false);
   return (
     <>
       <div className="flex justify-between items-center py-[10px] lg:py-[20px] px-[10px] lg:px-[30px]">
         {/* hamburger part */}
         <div className="flex justify-center items-center gap-[10px]">
           <div className="  w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-slate-900 rounded-full hidden lg:flex cursor-pointer" >
-            <RxHamburgerMenu className="text-lg" onClick= {() => {
-            setIsHamOpen(!isHamOpen);
-          }}/>
+            <RxHamburgerMenu className="text-lg" 
+            onClick = {props.changeHam}
+          //   onClick= {() => {
+          //   setIsHamOpen(!isHamOpen);
+          // }}
+          />
           </div>
           <img
             src={
@@ -57,38 +60,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* left sided navbar */}
-      {
-        isHamOpen ? (
 
-            <div className="w-[15vw]  sm:w-[10vw] lg:w-[5vw] flex flex-col justify-center items-center gap-[40px] pt-[10px]">
-<div className="flex flex-col justify-center items-center px-[5px]">
-<FaHome className="text-sm sm:text-lg lg:text-2xl"/>
-<h2 className="text-xs sm:text-base">Home</h2>
-</div>
-<div className="flex flex-col justify-center items-center px-[5px]">
-<FaHome className="text-sm sm:text-lg lg:text-2xl"/>
-<h2 className="text-xs sm:text-base">Home</h2>
-</div>
-<div className="flex flex-col justify-center items-center px-[5px]">
-<FaHome className="text-sm sm:text-lg lg:text-2xl"/>
-<h2 className="text-xs sm:text-base">Home</h2>
-</div>
-<div className="flex flex-col justify-center items-center px-[5px]">
-<FaHome className="text-sm sm:text-lg lg:text-2xl"/>
-<h2 className="text-xs sm:text-base">Home</h2>
-</div>
-      </div>
-        ): 
-        (
-            <div className="w-[15vw]  sm:w-[10vw] lg:w-[5vw] flex flex-col justify-center items-center gap-[40px] pt-[10px]">
-<div className="flex flex-col justify-center items-center px-[5px]">
-<FaHome className="text-sm sm:text-lg lg:text-2xl"/>
-<h2 className="text-xs sm:text-base">Home</h2>
-</div>
-      </div>
-        )
-      }
       
     </>
   );
