@@ -19,13 +19,14 @@ const Video = ({ video }) => {
   }, [video]);
 
   return (
-    <div className="w-[20vw] flex flex-col gap-[10px] cursor-pointer">
-      <img src={thumbnail} alt={title} className="w-[100%] h-[auto] object-cover"  />
+    <div className="w-[100%] flex flex-col gap-[10px] cursor-pointer">
+      <img src={thumbnail} alt={title} className="w-[100%] h-[auto] object-cover rounded-lg"  />
       <div className="flex justify-start items-start gap-[10px]">
         {/* logo side */}
-        <div className="w-[40px] h-[40px] flex justify-center items-center " >
-            <img src={channelLogo} className="w-[40px] h-[40px] rounded-full object-cover"/>
-        </div>
+        <div className="w-[100px] h-[50px] flex justify-center items-center">
+  <img src={channelLogo} className="w-full h-full rounded-full object-cover" alt="Channel Logo"/>
+</div>
+
         <div className="flex flex-col gap-[4px]">
           <h2 className="text-sm font-bold">{title}</h2>
           <h2 className="text-xs text-slate-600">{channelTitle}</h2>

@@ -4,7 +4,7 @@ import Body from './components/Body';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
-  const [isHamOpen, setIsHamOpen] = useState(false);
+  const [isHamOpen, setIsHamOpen] = useState(true);
   function changeHam() {
     setIsHamOpen(!isHamOpen);
     console.log(isHamOpen)

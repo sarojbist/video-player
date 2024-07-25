@@ -10,7 +10,7 @@ const Header = (props) => {
     // const [isHamOpen, setIsHamOpen] = useState(false);
   return (
     <>
-      <div className="flex justify-between items-center py-[10px] lg:py-[20px] px-[10px] lg:px-[30px]">
+      <div className="flex justify-between items-center py-[10px] lg:py-[20px] bg-[#121212] px-[10px] lg:px-[30px] sticky top-0 z-50">
         {/* hamburger part */}
         <div className="flex justify-center items-center gap-[10px]">
           <div className="  w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-slate-900 rounded-full hidden lg:flex cursor-pointer" >
