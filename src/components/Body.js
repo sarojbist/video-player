@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Video from "./video";
 import { API_KEY } from "../data";
 
@@ -71,9 +72,11 @@ const Body = ({isHamOpen, category, setCategory}) => {
           </div>
         
         )}
-        <div className={`grid gap-x-[10px] gap-y-[30px] ${isHamOpen? "lg:grid-cols-4": "lg:grid-cols-3" }`}>
-          {videos.map((video) => (
-           <Video key={video.id} video={video}/>
+        <div className={`grid gap-x-[10px] gap-y-[30px] ${isHamOpen? "lg:grid-cols-4" : "lg:grid-cols-3" }`}>
+          {videos.map((video, index) => (
+          <Link key={video.id} to={`video/${video.snippet.categoryId}/${video.id}`} >
+          <Video video={video} />
+          </Link>
           ))}
         </div>
       </div>

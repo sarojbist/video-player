@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from "react";
-
+import VideoFeed from "./VideoFeed";
 const Video = ({ video }) => {
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
   const thumbnail = thumbnails.medium.url;
   const views = video.statistics.viewCount;
   const [channelLogo, setChannelLogo] = useState('');
+
   useEffect(() => {
+    // for logo only
     const fetchChannelLogo = async () => {
       const channelId = video.snippet.channelId;
       const response = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=AIzaSyC1DNJU2dZ5ZDs7tbieny7gUBAFyiqv2ac`);
