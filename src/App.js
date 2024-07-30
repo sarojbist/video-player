@@ -3,6 +3,8 @@ import Header from './components/header';
 import Body from './components/Body';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import VideoFeed from './components/VideoFeed';
+
 function App() {
   const [isHamOpen, setIsHamOpen] = useState(true);
   const [category, setCategory] = useState(0);
@@ -13,18 +15,16 @@ function App() {
   }
   return (
     <Router>
+      <>
+        <div className='max-h-screen flex flex-col'>
+          <Header changeHam={changeHam} />
+          <Routes>
+            <Route path='/' element={<Body isHamOpen={isHamOpen} category={category} setCategory={setCategory} />} />
+            <Route path="video/:categoryId/:videoId" element={<VideoFeed />} />
+          </Routes>
 
-  
-    <>
-    <div className='max-h-screen flex flex-col'>
-    <Header changeHam = {changeHam} />
-    <Routes>
-      <Route path='/' element={ <Body isHamOpen = {isHamOpen} category={category} setCategory={setCategory} />} />
-    </Routes>
-   
-    </div>
-
-    </>
+        </div>
+      </>
     </Router>
   );
 }

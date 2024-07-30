@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import VideoFeed from "./VideoFeed";
+
 const Video = ({ video }) => {
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
   const thumbnail = thumbnails.medium.url;
