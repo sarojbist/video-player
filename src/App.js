@@ -20,7 +20,7 @@ function App() {
           <Header changeHam={changeHam} />
           <Routes>
             <Route path='/' element={<Body isHamOpen={isHamOpen} category={category} setCategory={setCategory} />} />
-            <Route path="video/:categoryId/:videoId" element={<VideoFeed />} />
+            <Route path="video/:categoryId/:videoId" element={<VideoFeed isHamOpen={isHamOpen} category={category} setCategory={setCategory}/>} />
           </Routes>
         </div>
       </>
