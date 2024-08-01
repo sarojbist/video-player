@@ -54,7 +54,6 @@ const Body = ({isHamOpen, category, setCategory}) => {
             </div>
             {/* first menu end */}
 
-            
             <div className={`flex justify-left items-center lg:px-[10px] gap-[20px] cursor-pointer  w-[100%] py-[8px] rounded-lg hover:bg-[#272727] group ${category == 42 ? "bg-[#272727]" : ""}`} onClick={() => setCategory(42)}>
               <FaHome className={`text-sm sm:text-lg lg:text-xl text-gray-400 group-hover:text-white ${category == 42 ? "text-white": ""}`}/>
               <h2 className="text-xs sm:text-base">Shorts</h2>

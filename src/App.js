@@ -22,11 +22,11 @@ function App() {
             <Route path='/' element={<Body isHamOpen={isHamOpen} category={category} setCategory={setCategory} />} />
             <Route path="video/:categoryId/:videoId" element={<VideoFeed />} />
           </Routes>
-
         </div>
       </>
     </Router>
   );
 }
-
 export default App;
+
+// :categoryId gives dynamic value. means it is like variable

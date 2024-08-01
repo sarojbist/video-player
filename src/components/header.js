@@ -2,25 +2,26 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { CiSearch } from "react-icons/ci";
 import { FaMicrophone } from "react-icons/fa";
 import { MdOutlineVideocam } from "react-icons/md";
-
 import { IoMdNotificationsOutline } from "react-icons/io";
-import logo from "../assets/images/logo.png";
+import {Link} from 'react-router-dom';
+
 // import {useState} from "react";
 const Header = (props) => {
-    // const [isHamOpen, setIsHamOpen] = useState(false);
+  // const [isHamOpen, setIsHamOpen] = useState(false);
   return (
     <>
       <div className="flex justify-between items-center py-[10px] lg:py-[20px] bg-[#121212] px-[10px] lg:px-[30px] sticky top-0 z-50">
         {/* hamburger part */}
         <div className="flex justify-center items-center gap-[10px]">
           <div className="  w-[40px] h-[40px] rounded-full flex justify-center items-center hover:bg-slate-900 rounded-full hidden lg:flex cursor-pointer" >
-            <RxHamburgerMenu className="text-lg" 
-            onClick = {props.changeHam}
-          //   onClick= {() => {
-          //   setIsHamOpen(!isHamOpen);
-          // }}
-          />
+            <RxHamburgerMenu className="text-lg"
+              onClick={props.changeHam}
+            //   onClick= {() => {
+            //   setIsHamOpen(!isHamOpen);
+            // }}
+            />
           </div>
+          <Link to="/">
           <img
             src={
               "https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_YouTube_%282015-2017%29.svg"
@@ -28,6 +29,7 @@ const Header = (props) => {
             alt="Logo"
             className="w-[80px]  lg:w-[100px] cursor-pointer"
           />
+          </Link>
         </div>
 
         {/* search part */}
@@ -61,7 +63,7 @@ const Header = (props) => {
       </div>
 
 
-      
+
     </>
   );
 };

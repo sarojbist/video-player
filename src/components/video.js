@@ -25,8 +25,8 @@ const Video = ({ video }) => {
       <img src={thumbnail} alt={title} className="w-[100%] h-[auto] object-cover rounded-lg"  />
       <div className="flex justify-start items-start gap-[10px]">
         {/* logo side */}
-        <div className="w-[50px] h-[50px] rounded-full flex justify-center items-center">
-  <img src={channelLogo} className="w-full h-full rounded-full object-cover" alt="Channel Logo"/>
+        <div className="w-[50px] rounded-[50%] flex justify-center items-center">
+  <img src={channelLogo} className="w-[50px] rounded-[50%] object-cover" alt="Channel Logo"/>
 </div>
 
         <div className="flex flex-col gap-[4px]">
